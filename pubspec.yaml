@@ -39,6 +39,7 @@ dependencies:
   very_good_analysis: ^6.0.0
   connectivity_plus: ^6.1.0
   flutter_screenutil: ^5.9.3
+  flutter_native_splash: ^2.4.3
 
 dev_dependencies:
   flutter_test:
