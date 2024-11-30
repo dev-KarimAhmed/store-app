@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "741924593201",
+    "project_id": "store-app-35cf4",
+    "storage_bucket": "store-app-35cf4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:741924593201:android:b22bab66cf3c907d4abf10",
+        "android_client_info": {
+          "package_name": "com.example.flutter_store_app_with_graphql"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf9hI2iwtr9nlkMkROVz7pvY1m4JSY5bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

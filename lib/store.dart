@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_store_app_with_graphql/core/app/env_variables.dart';
 
 class StoreQl extends StatelessWidget {
   const StoreQl({super.key});
@@ -7,7 +8,7 @@ class StoreQl extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: EnvVariables.instance.isDev,
       title: 'StoreQl',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
