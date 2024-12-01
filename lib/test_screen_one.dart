@@ -8,13 +8,15 @@ class TestScreenOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.teal,
       body: Center(
         child: ElevatedButton(
           onPressed: () {
             context.pushNamed(AppRoutes.testScreentwo);
           },
-          child: const Text('go Screen two'),
+          child: Text(
+            'go Screen two',
+            style: TextStyle(fontSize: 28, color: context.color.mainColor),
+          ),
         ),
       ),
     );

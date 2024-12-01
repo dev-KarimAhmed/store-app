@@ -4,6 +4,7 @@ import 'package:flutter_store_app_with_graphql/core/app/connectivity_controller.
 import 'package:flutter_store_app_with_graphql/core/app/env_variables.dart';
 import 'package:flutter_store_app_with_graphql/core/common/screens/no_network_screen.dart';
 import 'package:flutter_store_app_with_graphql/core/routes/app_routes.dart';
+import 'package:flutter_store_app_with_graphql/core/styles/theme/app_theme.dart';
 
 class StoreQl extends StatelessWidget {
   const StoreQl({super.key});
@@ -29,14 +30,11 @@ class StoreQl extends StatelessWidget {
                   ),
                 );
               },
+              theme: AppTheme.lighTheme(),
               debugShowCheckedModeBanner: EnvVariables.instance.isDev,
               title: 'StoreQl',
-              theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true,
-              ),
-             initialRoute: AppRoutes.testScreenOne,
-             onGenerateRoute: AppRoutes.onGenerateRout,
+              initialRoute: AppRoutes.testScreenOne,
+              onGenerateRoute: AppRoutes.onGenerateRout,
             ),
           );
         } else {
