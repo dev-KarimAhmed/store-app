@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/theme/color_theme.dart';
 
+import '../language/app_localization.dart';
+
 extension ContextExt on BuildContext {
+//color
+  MyColors get color => Theme.of(this).extension<MyColors>()!;
 
-//color 
+// Language
 
-MyColors get color => Theme.of(this).extension<MyColors>()!; 
+  String translate(String langKey) {
+    return AppLocalizations.of(this)!.translate(langKey).toString();
+  }
 
   Future<dynamic> pushNamed(String routeName, {Object? arguments}) {
     return Navigator.pushNamed(this, routeName, arguments: arguments);
@@ -19,8 +25,10 @@ MyColors get color => Theme.of(this).extension<MyColors>()!;
     );
   }
 
-  Future<dynamic> pushNamedAndRemoveUntil(String routeName,
-      {Object? arguments}) {
+  Future<dynamic> pushNamedAndRemoveUntil(
+    String routeName, {
+    Object? arguments,
+  }) {
     return Navigator.pushNamedAndRemoveUntil(
       this,
       routeName,

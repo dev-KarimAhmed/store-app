@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_store_app_with_graphql/core/app/connectivity_controller.dart';
 import 'package:flutter_store_app_with_graphql/core/app/env_variables.dart';
 import 'package:flutter_store_app_with_graphql/core/common/screens/no_network_screen.dart';
+import 'package:flutter_store_app_with_graphql/core/language/app_localization_setup.dart';
 import 'package:flutter_store_app_with_graphql/core/routes/app_routes.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/theme/app_theme.dart';
 
@@ -20,13 +21,24 @@ class StoreQl extends StatelessWidget {
             designSize: const Size(375, 812),
             minTextAdapt: true,
             child: MaterialApp(
+              locale: const Locale('ar'),
+              supportedLocales: AppLocalizationsSetup.supportedLocales,
+              localeResolutionCallback:
+                  AppLocalizationsSetup.localeResolutionCallback,
+              localizationsDelegates:
+                  AppLocalizationsSetup.localizationsDelegates,
               builder: (context, child) {
-                return Scaffold(
-                  body: Builder(
-                    builder: (context) {
-                      ConnectivityController.instance.init();
-                      return child!;
-                    },
+                return GestureDetector(
+                  onTap: () {
+                    FocusManager.instance.primaryFocus?.unfocus();
+                  },
+                  child: Scaffold(
+                    body: Builder(
+                      builder: (context) {
+                        ConnectivityController.instance.init();
+                        return child!;
+                      },
+                    ),
                   ),
                 );
               },

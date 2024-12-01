@@ -13,7 +13,7 @@ class MyColors extends ThemeExtension<MyColors> {
 
   @override
   ThemeExtension<MyColors> lerp(
-      covariant ThemeExtension<MyColors>? other, double t) {
+      covariant ThemeExtension<MyColors>? other, double t,) {
     if (other! is MyColors) {
       return this;
     }
