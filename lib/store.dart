@@ -21,7 +21,7 @@ class StoreQl extends StatelessWidget {
             designSize: const Size(375, 812),
             minTextAdapt: true,
             child: MaterialApp(
-              locale: const Locale('ar'),
+              locale: const Locale('en'),
               supportedLocales: AppLocalizationsSetup.supportedLocales,
               localeResolutionCallback:
                   AppLocalizationsSetup.localeResolutionCallback,
@@ -42,10 +42,10 @@ class StoreQl extends StatelessWidget {
                   ),
                 );
               },
-              theme: AppTheme.lighTheme(),
+              theme: AppTheme.darkTheme(),
               debugShowCheckedModeBanner: EnvVariables.instance.isDev,
               title: 'StoreQl',
-              initialRoute: AppRoutes.testScreenOne,
+              initialRoute: AppRoutes.loginScreen,
               onGenerateRoute: AppRoutes.onGenerateRout,
             ),
           );

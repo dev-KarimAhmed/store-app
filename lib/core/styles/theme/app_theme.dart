@@ -7,7 +7,7 @@ import 'package:flutter_store_app_with_graphql/core/styles/theme/color_theme.dar
 class AppTheme {
   static ThemeData lighTheme() {
     return ThemeData(
-      extensions: const <ThemeExtension<dynamic>>[MyColors.dark],
+      extensions: const <ThemeExtension<dynamic>>[MyColors.light],
       scaffoldBackgroundColor: LighColors.mainColor,
       useMaterial3: true,
       textTheme: TextTheme(
@@ -15,22 +15,22 @@ class AppTheme {
           color: DarkColors.white,
           fontSize: 14,
           fontFamily: FontFamilyHelper.getFontFamily(),
-        )
+        ),
       ),
     );
   }
 
   static ThemeData darkTheme() {
     return ThemeData(
-      extensions: const <ThemeExtension<dynamic>>[MyColors.light],
+      extensions: const <ThemeExtension<dynamic>>[MyColors.dark],
       scaffoldBackgroundColor: DarkColors.mainColor,
       useMaterial3: true,
       textTheme: TextTheme(
         displaySmall: TextStyle(
-          color: LighColors.black,
+          color: LighColors.white,
           fontSize: 14,
           fontFamily: FontFamilyHelper.getFontFamily(),
-        )
+        ),
       ),
     );
   }
