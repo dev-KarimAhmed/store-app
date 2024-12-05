@@ -10,7 +10,7 @@ class UnderBuilderScreen extends StatelessWidget {
     return Scaffold(
       body: Container(
         constraints: const BoxConstraints.expand(),
-        child: const Image(image: AssetImage(AppImages.underBuilderImage)),
+        child: const Image(image: AssetImage(AppImages.pageUnderBuild)),
       ),
     );
   }

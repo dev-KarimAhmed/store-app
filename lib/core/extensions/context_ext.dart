@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/theme/color_theme.dart';
 
-import '../language/app_localization.dart';
+import 'package:flutter_store_app_with_graphql/core/language/app_localization.dart';
 
 extension ContextExt on BuildContext {
 //color
   MyColors get color => Theme.of(this).extension<MyColors>()!;
 
 // Language
+
+  TextStyle get textStyle => Theme.of(this).textTheme.displaySmall!;
 
   String translate(String langKey) {
     return AppLocalizations.of(this)!.translate(langKey).toString();
