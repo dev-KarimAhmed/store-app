@@ -6,15 +6,16 @@ import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart'
 import 'package:flutter_store_app_with_graphql/core/functions/translate_word.dart';
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/routes/app_routes.dart';
-import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
 import 'package:flutter_store_app_with_graphql/features/auth/widgets/auth_title_info.dart';
-
+import 'package:flutter_store_app_with_graphql/features/auth/widgets/circl_avatar.dart';
 import 'package:flutter_store_app_with_graphql/features/auth/widgets/dark_and_lang_buttons.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/login_button.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/login_text_field.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/widgets/sign_up_button.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/widgets/sign_up_text_field.dart';
 
-class LoginScreenBody extends StatelessWidget {
-  const LoginScreenBody({super.key});
+import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
+
+class SignUpScreenBody extends StatelessWidget {
+  const SignUpScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,31 +26,35 @@ class LoginScreenBody extends StatelessWidget {
           children: [
             const DarkAndLangButtons(),
             SizedBox(
-              height: 50.h,
+              height: 30.h,
             ),
             AuthTitleInfo(
-              title: context.translate(LangKeys.login),
+              title: context.translate(LangKeys.signUp),
               desc: context.translate(LangKeys.welcome),
             ),
             SizedBox(
-              height: 50.h,
+              height: 10.h,
             ),
-            const LoginTextFormField(),
+            const CircleImageAvatar(),
             SizedBox(
-              height: 50.h,
+              height: 20.h,
             ),
-            const LoginButton(),
+            const SignUpTextField(),
             SizedBox(
-              height: 30.h,
+              height: 20.h,
+            ),
+            const SignUpButton(),
+            SizedBox(
+              height: 20.h,
             ),
             CustomFadeInRight(
-              duration: 400,
+              duration: 600,
               child: TextButton(
                 onPressed: () {
-                  context.pushReplacementNamed(AppRoutes.signupScreen);
+                  context.pushReplacementNamed(AppRoutes.loginScreen);
                 },
                 child: TextApp(
-                  text: translateWord(context, LangKeys.createAccount),
+                  text: translateWord(context, LangKeys.youHaveAccount),
                   theme: context.textStyle.copyWith(
                     fontSize: 16.sp,
                     fontWeight: FontWeightHelper.regular,
