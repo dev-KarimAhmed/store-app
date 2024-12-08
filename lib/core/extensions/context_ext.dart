@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_store_app_with_graphql/core/styles/theme/color_theme.dart';
-
 import 'package:flutter_store_app_with_graphql/core/language/app_localization.dart';
+import 'package:flutter_store_app_with_graphql/core/styles/theme/color_theme.dart';
 
 extension ContextExt on BuildContext {
 //color

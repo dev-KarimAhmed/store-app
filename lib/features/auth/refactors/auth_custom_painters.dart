@@ -30,74 +30,63 @@ class AuthCustomPainter extends CustomPainter {
   }
 }
 
+class MyCustomPainter extends CustomPainter {
+  MyCustomPainter({required this.gradient, super.repaint});
 
-class MyCustomPainter extends CustomPainter{
-  MyCustomPainter({required this.gradient , super.repaint});
+  final LinearGradient gradient;
 
-   final LinearGradient gradient;
-  
   @override
   void paint(Canvas canvas, Size size) {
-    
-    
+    // Layer 1
 
-  // Layer 1
-  
-  Paint paint_fill_0 = Paint()
+    final paintFill0 = Paint()
       ..shader = gradient.createShader(
         Rect.fromPoints(Offset.zero, Offset(0, size.height)),
-      );;
-     
-         
-    Path path_0 = Path();
-    path_0.moveTo(size.width*0.2908333,size.height*0.1250000);
-    path_0.lineTo(size.width*0.2916667,size.height*0.1366667);
-    path_0.lineTo(size.width*0.2941667,size.height*0.1816667);
-    path_0.lineTo(size.width*0.3008333,size.height*0.2150000);
-    path_0.lineTo(size.width*0.3100000,size.height*0.2750000);
-    path_0.lineTo(size.width*0.3191667,size.height*0.2916667);
-    path_0.lineTo(size.width*0.3258333,size.height*0.3100000);
-    path_0.lineTo(size.width*0.3383333,size.height*0.3216667);
-    path_0.lineTo(size.width*0.3658333,size.height*0.3316667);
-    path_0.lineTo(size.width*0.3925000,size.height*0.3283333);
-    path_0.lineTo(size.width*0.4058333,size.height*0.3283333);
-    path_0.lineTo(size.width*0.4233333,size.height*0.3250000);
-    path_0.lineTo(size.width*0.4450000,size.height*0.3083333);
-    path_0.lineTo(size.width*0.4541667,size.height*0.2966667);
-    path_0.lineTo(size.width*0.4600000,size.height*0.2783333);
-    path_0.lineTo(size.width*0.4683333,size.height*0.2416667);
-    path_0.lineTo(size.width*0.4683333,size.height*0.2133333);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1916667);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1550000);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1466667);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1350000);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1350000);
-    path_0.lineTo(size.width*0.4691667,size.height*0.1266667);
-    path_0.lineTo(size.width*0.4683333,size.height*0.1166667);
-    path_0.lineTo(size.width*0.4683333,size.height*0.1166667);
+      );
 
-    canvas.drawPath(path_0, paint_fill_0);
-  
+    final path_0 = Path();
+    path_0.moveTo(size.width * 0.2908333, size.height * 0.1250000);
+    path_0.lineTo(size.width * 0.2916667, size.height * 0.1366667);
+    path_0.lineTo(size.width * 0.2941667, size.height * 0.1816667);
+    path_0.lineTo(size.width * 0.3008333, size.height * 0.2150000);
+    path_0.lineTo(size.width * 0.3100000, size.height * 0.2750000);
+    path_0.lineTo(size.width * 0.3191667, size.height * 0.2916667);
+    path_0.lineTo(size.width * 0.3258333, size.height * 0.3100000);
+    path_0.lineTo(size.width * 0.3383333, size.height * 0.3216667);
+    path_0.lineTo(size.width * 0.3658333, size.height * 0.3316667);
+    path_0.lineTo(size.width * 0.3925000, size.height * 0.3283333);
+    path_0.lineTo(size.width * 0.4058333, size.height * 0.3283333);
+    path_0.lineTo(size.width * 0.4233333, size.height * 0.3250000);
+    path_0.lineTo(size.width * 0.4450000, size.height * 0.3083333);
+    path_0.lineTo(size.width * 0.4541667, size.height * 0.2966667);
+    path_0.lineTo(size.width * 0.4600000, size.height * 0.2783333);
+    path_0.lineTo(size.width * 0.4683333, size.height * 0.2416667);
+    path_0.lineTo(size.width * 0.4683333, size.height * 0.2133333);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1916667);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1550000);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1466667);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1350000);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1350000);
+    path_0.lineTo(size.width * 0.4691667, size.height * 0.1266667);
+    path_0.lineTo(size.width * 0.4683333, size.height * 0.1166667);
+    path_0.lineTo(size.width * 0.4683333, size.height * 0.1166667);
 
-  // Layer 1
-  
-  Paint paint_stroke_0 = Paint()
+    canvas.drawPath(path_0, paintFill0);
+
+    // Layer 1
+
+    final paintStroke0 = Paint()
       ..color = const Color.fromARGB(255, 33, 150, 243)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = size.width*0.00
+      ..strokeWidth = size.width * 0.00
       ..strokeCap = StrokeCap.butt
       ..strokeJoin = StrokeJoin.miter;
-     
-         
-    
-    canvas.drawPath(path_0, paint_stroke_0);
-  
-    
+
+    canvas.drawPath(path_0, paintStroke0);
   }
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
     return true;
   }
-  
 }

@@ -6,7 +6,6 @@ import 'package:flutter_store_app_with_graphql/core/common/widgets/text_app.dart
 import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart';
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/screens/login_screen.dart';
 
 class DarkAndLangButtons extends StatelessWidget {
   const DarkAndLangButtons({super.key});

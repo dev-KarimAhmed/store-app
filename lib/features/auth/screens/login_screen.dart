@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart';
 import 'package:flutter_store_app_with_graphql/features/auth/refactors/auth_custom_painters.dart';
 import 'package:flutter_store_app_with_graphql/features/auth/refactors/login_screen_body.dart';
-import 'package:flutter_store_app_with_graphql/store.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
