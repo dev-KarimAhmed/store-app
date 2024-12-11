@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_store_app_with_graphql/core/common/animations/animation_do.dart';
 import 'package:flutter_store_app_with_graphql/core/common/widgets/custom_text_field.dart';
 import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart';
 import 'package:flutter_store_app_with_graphql/core/functions/translate_word.dart';
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/utils/app_regx.dart';
-
-import 'package:flutter_store_app_with_graphql/core/common/animations/animation_do.dart';
 
 class SignUpTextField extends StatefulWidget {
   const SignUpTextField({super.key});
