@@ -7,6 +7,7 @@ import 'package:flutter_store_app_with_graphql/core/common/animations/animation_
 import 'package:flutter_store_app_with_graphql/core/common/widgets/custom_linear_button.dart';
 import 'package:flutter_store_app_with_graphql/core/common/widgets/text_app.dart';
 import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart';
+import 'package:flutter_store_app_with_graphql/core/language/app_localization.dart';
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
 import 'package:flutter_store_app_with_graphql/main.dart';
@@ -39,7 +40,13 @@ class DarkAndLangButtons extends StatelessWidget {
               child: CustomLinearButton(
                 height: 44.h,
                 width: 100.w,
-                onPressed: () {},
+                onPressed: () {
+                  if (AppLocalizations.of(context)!.isEnLocale) {
+                    cubit.toArabic();
+                  } else {
+                    cubit.toEnglish();
+                  }
+                },
                 child: TextApp(
                   text: context.translate(LangKeys.language),
                   theme: context.textStyle.copyWith(

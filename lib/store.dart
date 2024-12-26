@@ -26,7 +26,8 @@ class StoreQl extends StatelessWidget {
             create: (context) => sl<AppCubit>()
               ..changeThemeMode(
                 sharedmode: SharedPref().getBoolean(SharedPrefKeys.mode),
-              ),
+              )
+              ..getSavedLanguage(),
             child: BlocBuilder<AppCubit, AppState>(
               buildWhen: (previous, current) => previous != current,
               builder: (context, state) {
@@ -35,7 +36,7 @@ class StoreQl extends StatelessWidget {
                   designSize: const Size(375, 812),
                   minTextAdapt: true,
                   child: MaterialApp(
-                    locale: const Locale('en'),
+                    locale: Locale(cubit.currentLanguage),
                     supportedLocales: AppLocalizationsSetup.supportedLocales,
                     localeResolutionCallback:
                         AppLocalizationsSetup.localeResolutionCallback,
