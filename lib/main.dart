@@ -8,7 +8,6 @@ import 'package:flutter_store_app_with_graphql/core/di/injection_container.dart'
 import 'package:flutter_store_app_with_graphql/core/services/shared_prefs/shareed_pref.dart';
 import 'package:flutter_store_app_with_graphql/firebase_options.dart';
 import 'package:flutter_store_app_with_graphql/store.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

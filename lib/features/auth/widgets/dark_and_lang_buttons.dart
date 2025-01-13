@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_store_app_with_graphql/core/app/app_cubit/app_cubit.dart';
-import 'package:flutter_store_app_with_graphql/core/app/bloc_observer.dart';
 import 'package:flutter_store_app_with_graphql/core/common/animations/animation_do.dart';
 import 'package:flutter_store_app_with_graphql/core/common/widgets/custom_linear_button.dart';
 import 'package:flutter_store_app_with_graphql/core/common/widgets/text_app.dart';
@@ -10,8 +9,6 @@ import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart'
 import 'package:flutter_store_app_with_graphql/core/language/app_localization.dart';
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
-import 'package:flutter_store_app_with_graphql/main.dart';
-import 'package:flutter_store_app_with_graphql/store.dart';
 
 class DarkAndLangButtons extends StatelessWidget {
   const DarkAndLangButtons({super.key});
