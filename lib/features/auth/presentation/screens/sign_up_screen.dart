@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_store_app_with_graphql/core/extensions/context_ext.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/refactors/auth_custom_painters.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/refactors/login_screen_body.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/refactors/auth_custom_painters.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/refactors/sign_up_screen_body.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class LoginScreen extends StatelessWidget {
       ),
       body: const SafeArea(
         bottom: false,
-        child: LoginScreenBody(),
+        child: SignUpScreenBody(),
       ),
     );
   }

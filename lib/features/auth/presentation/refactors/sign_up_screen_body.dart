@@ -7,11 +7,11 @@ import 'package:flutter_store_app_with_graphql/core/functions/translate_word.dar
 import 'package:flutter_store_app_with_graphql/core/language/lang_key.dart';
 import 'package:flutter_store_app_with_graphql/core/routes/app_routes.dart';
 import 'package:flutter_store_app_with_graphql/core/styles/fonts/font_weight_helper.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/auth_title_info.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/circl_avatar.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/dark_and_lang_buttons.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/sign_up_button.dart';
-import 'package:flutter_store_app_with_graphql/features/auth/widgets/sign_up_text_field.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/widgets/auth_title_info.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/widgets/circl_avatar.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/widgets/dark_and_lang_buttons.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/widgets/sign_up_button.dart';
+import 'package:flutter_store_app_with_graphql/features/auth/presentation/widgets/sign_up_text_field.dart';
 
 class SignUpScreenBody extends StatelessWidget {
   const SignUpScreenBody({super.key});
